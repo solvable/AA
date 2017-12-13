@@ -4,7 +4,7 @@
     <h2>Customers</h2>
         <ul>
             {% for customer in customer_list %}
-            <li><a href="{% url 'detail' customer.id%}">{{ customer.fullName }}</a></li>
+            <li><a href="{% url 'customer_detail' customer.id%}">{{ customer.fullName }}</a></li>
             {% endfor %}
         </ul>
 {% endblock content %}

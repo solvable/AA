@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{{ block.super }}
+<h1>Customer Form</h1>
+
+<form method='POST' action='' id="post-form">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="next" value="{{ request.path }}">
+    <input type="submit" value="Save Customer">
+</form>
+{% endblock content %}
+
