@@ -9,14 +9,14 @@
 <div class="container">
     <div id='customer_info_div' class='customer_info col-sm-10'>
         <h2>Customer Info:</h2>
-        <a href="{{ customer.edit }}edit" class="btn btn-primary" role="button">Edit</a>
+        <a href="{%  url 'customer_update' pk=customer.pk %}" class="btn btn-primary" role="button">Edit</a>
         <a href="{{ instance.delete }}delete"
            onclick="return confirm('Are you sure want to delete this Customer?');"
            class="btn btn-danger" role="button">Delete</a></br>
         <table class="metadata_table">
             <tr>
                 <td>Customer Id:</td>
-                <td class="td-worktable">{{customer.id}}</td>
+                <td class="td-worktable">{{customer.pk}}</td>
                 <td>Source:</td>
                 <td class="td-worktable">{{customer.source}}</td>
             </tr>
